@@ -68,6 +68,62 @@ BFF (Backend For Frontend)
    ├── Serviço de Agendamento / Tarefas
    └── Serviço de Notificação
 
+##Diagrama
+
+                +----------------------+
+                |       Cliente        |
+                | Frontend / Postman   |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                |         BFF          |
+                | Backend For Frontend |
+                +----+-----------+-----+
+                     |           |
+                     |           v
+                     |   +----------------------+
+                     |   |  Serviço de Usuário  |
+                     |   | autenticação, login, |
+                     |   | gestão de usuários   |
+                     |   +----------+-----------+
+                     |              |
+                     |              v
+                     |   +----------------------+
+                     |   | Banco de Usuários    |
+                     |   +----------------------+
+                     |
+                     v
+          +------------------------------+
+          | Serviço de Agendamento /     |
+          | Tarefas                      |
+          | criação e gestão de tarefas  |
+          +-------------+----------------+
+                        |
+                        | valida / associa usuário
+                        v
+              +----------------------+
+              |  Serviço de Usuário  |
+              +----------------------+
+                        |
+                        v
+          +------------------------------+
+          | Banco de Agendamentos /      |
+          | Tarefas                      |
+          +-------------+----------------+
+                        |
+                        v
+              +----------------------+
+              | Serviço de           |
+              | Notificação          |
+              +----------+-----------+
+                         |
+                         v
+              +----------------------+
+              | Canal / Registro de  |
+              | Notificação          |
+              +----------------------+
+
 
 ## Tecnologias utilizadas
 
