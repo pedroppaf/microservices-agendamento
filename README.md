@@ -108,7 +108,7 @@ Cada microsserviço possui seu próprio repositório e sua própria configuraç�
 
 Para executar o sistema completo, é necessário:
 
--clonar os repositórios individuais
--configurar as dependências e bancos de dados necessários
+- clonar os repositórios individuais
+- configurar as dependências e bancos de dados necessários
 - iniciar os serviços separadamente
 - utilizar o BFF como ponto principal de acesso
